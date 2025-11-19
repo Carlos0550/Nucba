@@ -1,0 +1,44 @@
+
+:root[data-mantine-color-scheme="dark"] {
+  --custom-bg: #1f1f1f;
+  --custom-text: #ffff00;
+  --custom-title: #ff4d4d;
+}
+
+:root[data-mantine-color-scheme="light"] {
+  --custom-bg: #ffffff;
+  --custom-text: #ff4d4d;
+  --custom-title: #1b1b1b;
+}
+
+.mantine-AppShell-root {
+  background: var(--custom-bg) !important;
+}
+
+.mantine-AppShell-header {
+  background: var(--custom-bg) !important;
+}
+
+.mantine-AppShell-navbar {
+  background: var(--custom-bg) !important;
+}
+
+.mantine-AppShell-main {
+  background: var(--custom-bg) !important;
+}
+
+.mantine-Anchor-root {
+  color: var(--custom-text) !important;
+}
+
+.mantine-Anchor-root:hover {
+  opacity: 0.8;
+}
+
+.mantine-Title-root {
+  color: var(--custom-title) !important;
+}
+
+.mantine-Text-root {
+  color: var(--custom-text) !important;
+}
