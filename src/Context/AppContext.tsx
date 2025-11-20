@@ -2,9 +2,15 @@
 import { createContext, useContext, useMemo } from 'react';
 import { useUtils } from './useUtils';
 import useBusinessLogic from './useBusinessLogic';
+import type { Product } from './types/Products';
+import type { Category } from './types/Category';
 
 type AppContextValue = {
   utils: ReturnType<typeof useUtils>;
+  products: Product[];
+  categories: Category[];
+  setProducts: (products: Product[]) => void;
+  setCategories: (categories: Category[]) => void;
 };
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -12,7 +18,7 @@ const AppContext = createContext<AppContextValue | null>(null);
 export function AppContextProvider({ children }: { children: React.ReactNode }) {
   const utils = useUtils()
   const { products, categories, setProducts, setCategories } = useBusinessLogic();
-  console.log(products)
+  
   const value = useMemo(
     () => ({ 
       utils,
