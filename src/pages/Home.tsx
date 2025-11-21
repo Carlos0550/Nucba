@@ -1,6 +1,7 @@
 import { Box, Image, Stack, Title } from "@mantine/core"
 import MainBanner from "@/assets/main_banner.jpg"
 import "./styles/home.css"
+import ProductCard from "@/Components/Generators/ProductCard"
 function Home() {
   return (
     <Stack>
@@ -9,7 +10,8 @@ function Home() {
         </Box>
 
         <Box p="md" h={"100vh"}>
-          <Title order={2}>Descubre todo lo que tenemos para ti</Title>
+          <Title order={2}>Nuestros mejores productos seleccionados para vos</Title>
+          <ProductCard fromHome={true}/>
         </Box>
     </Stack>
   )
